@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laudato – L.T. Services dal 1978 | Articoli Cimiteriali Benevento</title>
+  <meta name="description" content="Laudato – L.T. Services dal 1978: articoli cimiteriali, composizioni, arte funeraria e forniture per marmisti a Benevento." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap');
+
+    :root{
+      --gold:#c9a961;
+      --gold-dark:#a88a4d;
+      --marble:#f8f8f6;
+      --marble-dark:#e8e8e4;
+      --gray:#4a4a4a;
+      --gray-light:#7a7a7a;
+      --white:#ffffff;
+      --overlay:rgba(0,0,0,.45);
+      --font-serif:'Cormorant Garamond', serif;
+      --font-sans:'Lato', sans-serif;
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    html,body{height:100%}
+    body{
+      font-family:var(--font-sans);
+      color:var(--gray);
+      background:var(--marble);
+      line-height:1.6;
+    }
+    a{color:inherit; text-decoration:none}
+
+    /* Header */
+    header{
+      background:linear-gradient(135deg, #d4b886, #c9a961);
+      border-bottom:2px solid var(--gold-dark);
+      position:sticky; top:0; z-index:100;
+      box-shadow:0 2px 12px rgba(0,0,0,.1);
+    }
+    .topbar{
+      max-width:1200px; margin:0 auto; padding:0 24px;
+      display:flex; align-items:center; justify-content:space-between;
+      height:70px; gap:16px;
+    }
+    .logo-area{display:flex; align-items:center; gap:12px}
+    .logo-area img{height:42px; width:auto; display:block}
+    .brand-text h1{
+      font-family:var(--font-serif);
+      font-size:18px; font-weight:600; color:var(--white);
+      letter-spacing:1.5px; text-transform:uppercase;
+      margin:0; line-height:1.2;
+    }
+    .brand-text p{
+      font-size:11px; color:rgba(255,255,255,.85);
+      margin:3px 0 0; letter-spacing:.8px;
+    }
+
+    .nav-container{
+      display:flex; 
+      align-items:center; 
+      gap:16px;
+      flex:1;
+      justify-content:center;
+    }
+
+    nav{display:flex; gap:0; align-items:center}
+    nav a{
+      padding:8px 18px;
+      font-size:14px; font-weight:400; color:var(--white);
+      border-bottom:3px solid transparent;
+      transition:all .3s;
+    }
+    nav a:hover, nav a.active{
+      border-bottom-color:var(--white);
+      background:rgba(255,255,255,.12);
+    }
+
+    .cta-buttons{display:flex; gap:10px; align-items:center}
+    .cta-phone, .cta-whatsapp{
+      background:var(--white);
+      color:var(--gold-dark);
+      padding:10px 18px; border-radius:30px;
+      font-weight:700; font-size:14px;
+      display:flex; align-items:center; gap:6px;
+      box-shadow:0 3px 10px rgba(0,0,0,.15);
+      transition:transform .2s;
+    }
+    .cta-whatsapp{
+      background:#25d366;
+      color:var(--white);
+    }
+    .cta-phone:hover, .cta-whatsapp:hover{transform:translateY(-2px)}
+
+    /* Mobile Menu */
+    .hamburger{
+      display:none;
+      flex-direction:column;
+      gap:5px;
+      cursor:pointer;
+      padding:8px;
+    }
+    .hamburger span{
+      width:28px;
+      height:3px;
+      background:var(--white);
+      border-radius:3px;
+      transition:all .3s;
+    }
+    .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px, 8px)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px, -7px)}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      height:70vh; min-height:500px;
+      display:flex; align-items:center; justify-content:center;
+      text-align:center; color:var(--white);
+      background-size:cover; background-position:center;
+    }
+    .hero::after{
+      content:'';
+      position:absolute; inset:0;
+      background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.55));
+      z-index:1;
+    }
+    .hero::before{
+      content:'';
+      position:absolute; inset:0;
+      background:
+        repeating-linear-gradient(90deg, transparent, transparent 1px, rgba(255,255,255,.015) 2px, transparent 3px),
+        repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,.015) 2px, transparent 3px);
+      pointer-events:none;
+      z-index:2;
+    }
+    
+    /* Hero backgrounds per sezione */
+    #home ~ .hero, .hero.hero-home{
+      background-image:url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1600&q=85');
+    }
+    .hero.hero-composizioni{
+      background-image:url('composizione.jpg');
+    }
+    .hero.hero-arte{
+      background-image:url('Arte-Funeraria.jpg');
+    }
+    .hero.hero-marmisti{
+      background-image:url('https://images.unsplash.com/photo-1603217039863-aa854a057bec?w=1600&q=85');
+    }
+    .hero.hero-contatti{
+      background-image:url('https://images.unsplash.com/photo-1497290756760-23ac55edf36f?w=1600&q=85');
+    }
+
+    .hero-content{
+      position:relative; z-index:3;
+      max-width:800px; padding:0 30px;
+    }
+    .hero h2{
+      font-family:var(--font-serif);
+      font-size:56px; font-weight:300; letter-spacing:4px;
+      margin:0 0 16px; text-transform:uppercase;
+      text-shadow:0 2px 20px rgba(0,0,0,.6);
+    }
+    .hero p{
+      font-size:18px; line-height:1.8; color:rgba(255,255,255,.92);
+      margin:0 0 28px; text-shadow:0 1px 8px rgba(0,0,0,.5);
+    }
+
+    /* Main */
+    main{
+      background:var(--marble);
+      padding:60px 30px;
+    }
+    .container{max-width:1200px; margin:0 auto}
+
+    section{display:none}
+    section.active{display:block}
+    section.active{animation:fadeIn .4s}
+    @keyframes fadeIn{from{opacity:0} to{opacity:1}}
+
+    h3{
+      font-family:var(--font-serif);
+      font-size:38px; font-weight:400; color:var(--gold-dark);
+      text-align:center; margin:0 0 40px;
+      letter-spacing:2px; text-transform:uppercase;
+    }
+
+    .intro{
+      text-align:center; max-width:900px; margin:0 auto 50px;
+      font-size:17px; line-height:1.9; color:var(--gray-light);
+    }
+
+    .grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:30px; margin-top:40px}
+    .card{
+      background:var(--white);
+      border:1px solid #e0e0de;
+      padding:30px 24px; text-align:center;
+      box-shadow:0 4px 18px rgba(0,0,0,.06);
+      transition:transform .3s, box-shadow .3s;
+    }
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 8px 28px rgba(0,0,0,.12);
+    }
+    .card h4{
+      font-family:var(--font-serif);
+      font-size:22px; font-weight:600; color:var(--gold-dark);
+      margin:0 0 12px; letter-spacing:1px;
+    }
+    .card p{font-size:15px; line-height:1.7; color:var(--gray-light)}
+    .card ul{list-style:none; padding:0; margin:12px 0 0; text-align:left}
+    .card li{
+      padding:8px 0; border-bottom:1px solid #f0f0ee;
+      font-size:14px; color:var(--gray-light);
+    }
+    .card li:last-child{border-bottom:0}
+
+    .grid2{grid-template-columns:1fr 1fr}
+    .full{grid-column:1/-1}
+
+    .partner-box{
+      background:var(--white);
+      border:1px solid #e0e0de;
+      padding:40px 30px; text-align:center;
+      box-shadow:0 4px 18px rgba(0,0,0,.06);
+      margin-top:50px;
+    }
+    .partner-box h4{
+      font-family:var(--font-serif);
+      font-size:28px; font-weight:500; color:var(--gold-dark);
+      margin:0 0 20px; letter-spacing:2px; text-transform:uppercase;
+    }
+    .partner-box img{
+      max-width:320px; width:100%; height:auto;
+      margin:20px auto; display:block;
+      border:1px solid #e0e0de; padding:16px; background:white;
+    }
+    .partner-box p{
+      font-size:16px; line-height:1.8; color:var(--gray-light);
+      max-width:700px; margin:16px auto 0;
+    }
+
+    /* PDF Viewer */
+    .pdf-section{
+      background:var(--white);
+      border:1px solid #e0e0de;
+      padding:30px;
+      margin-top:40px;
+      box-shadow:0 4px 18px rgba(0,0,0,.06);
+    }
+    .pdf-section h4{
+      font-family:var(--font-serif);
+      font-size:26px; font-weight:600; color:var(--gold-dark);
+      margin:0 0 20px; text-align:center;
+      letter-spacing:1.5px;
+    }
+    .pdf-controls{
+      display:flex; gap:12px; justify-content:center;
+      margin-bottom:20px; flex-wrap:wrap;
+    }
+    .pdf-btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:12px 24px; border-radius:8px;
+      font-weight:600; font-size:15px;
+      transition:transform .2s, box-shadow .2s;
+      cursor:pointer; border:none;
+      font-family:var(--font-sans);
+    }
+    .pdf-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(0,0,0,.2);
+    }
+    .pdf-btn.download{
+      background:var(--gold);
+      color:var(--white);
+    }
+    .pdf-btn.view{
+      background:var(--gray);
+      color:var(--white);
+    }
+    .pdf-viewer{
+      width:100%; height:800px;
+      border:2px solid #e0e0de;
+      border-radius:8px;
+      background:#f5f5f5;
+    }
+
+    /* Image Gallery */
+    .image-gallery{
+      background:var(--white);
+      border:1px solid #e0e0de;
+      padding:30px;
+      margin-top:40px;
+      box-shadow:0 4px 18px rgba(0,0,0,.06);
+    }
+    .image-gallery h4{
+      font-family:var(--font-serif);
+      font-size:26px; font-weight:600; color:var(--gold-dark);
+      margin:0 0 10px; text-align:center;
+      letter-spacing:1.5px;
+    }
+    .gallery-subtitle{
+      text-align:center;
+      color:var(--gray-light);
+      font-size:15px;
+      margin-bottom:25px;
+    }
+    
+    /* Slideshow Container */
+    .slideshow-container{
+      position:relative;
+      max-width:800px;
+      margin:0 auto;
+      background:#f5f5f5;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 8px 24px rgba(0,0,0,.15);
+    }
+    
+    .slide{
+      display:none;
+      position:relative;
+    }
+    .slide.active{
+      display:block;
+      animation:slideIn .5s ease;
+    }
+    @keyframes slideIn{
+      from{opacity:0; transform:scale(.95)}
+      to{opacity:1; transform:scale(1)}
+    }
+    
+    .slide img{
+      width:100%;
+      height:auto;
+      display:block;
+      max-height:600px;
+      object-fit:contain;
+    }
+    
+    /* Navigation Arrows */
+    .slide-arrow{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,.6);
+      color:white;
+      border:none;
+      font-size:28px;
+      padding:16px 20px;
+      cursor:pointer;
+      transition:all .3s;
+      z-index:10;
+    }
+    .slide-arrow:hover{
+      background:var(--gold);
+    }
+    .slide-arrow.prev{left:0; border-radius:0 8px 8px 0}
+    .slide-arrow.next{right:0; border-radius:8px 0 0 8px}
+    
+    /* Thumbnails */
+    .thumbnails{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
+      gap:12px;
+      margin-top:20px;
+    }
+    .thumbnail{
+      cursor:pointer;
+      border:3px solid transparent;
+      border-radius:8px;
+      overflow:hidden;
+      transition:all .3s;
+      opacity:.7;
+    }
+    .thumbnail:hover{
+      opacity:1;
+      transform:scale(1.05);
+    }
+    .thumbnail.active{
+      border-color:var(--gold);
+      opacity:1;
+    }
+    .thumbnail img{
+      width:100%;
+      height:100px;
+      object-fit:cover;
+      display:block;
+    }
+    
+    /* Slideshow Controls */
+    .slideshow-controls{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:15px;
+      margin-top:20px;
+    }
+    .slideshow-btn{
+      background:var(--gold);
+      color:var(--white);
+      border:none;
+      padding:10px 20px;
+      border-radius:8px;
+      font-size:14px;
+      font-weight:600;
+      cursor:pointer;
+      transition:all .2s;
+    }
+    .slideshow-btn:hover{
+      background:var(--gold-dark);
+      transform:translateY(-2px);
+    }
+    .slideshow-counter{
+      font-size:15px;
+      font-weight:600;
+      color:var(--gray);
+    }
+
+    .contact-buttons{
+      display:flex; gap:12px; justify-content:center; 
+      flex-wrap:wrap; margin-top:20px;
+    }
+    .contact-btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:12px 24px; border-radius:8px;
+      font-weight:600; font-size:15px;
+      transition:transform .2s, box-shadow .2s;
+      text-decoration:none;
+    }
+    .contact-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 4px 12px rgba(0,0,0,.2);
+    }
+    .contact-btn.phone{
+      background:var(--gold);
+      color:var(--white);
+    }
+    .contact-btn.whatsapp{
+      background:#25d366;
+      color:var(--white);
+    }
+
+    /* Footer */
+    footer{
+      background:linear-gradient(135deg, #4a4a4a, #3a3a3a);
+      color:rgba(255,255,255,.8);
+      padding:40px 30px 20px;
+      text-align:center;
+    }
+    footer .container{max-width:1200px; margin:0 auto}
+    footer h4{
+      font-family:var(--font-serif);
+      font-size:24px; color:var(--gold);
+      margin:0 0 10px; letter-spacing:2px;
+    }
+    footer p{margin:6px 0; font-size:14px}
+    footer a{color:var(--gold); font-weight:600}
+    footer .credits{
+      margin-top:30px; padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.15);
+      font-size:12px; color:rgba(255,255,255,.5);
+    }
+
+    /* Form */
+    form{display:grid; gap:14px; max-width:600px; margin:30px auto 0}
+    input, select, textarea{
+      padding:14px 16px; border:1px solid #d0d0ce;
+      background:var(--white); color:var(--gray);
+      font-family:var(--font-sans); font-size:15px;
+      border-radius:4px;
+    }
+    input:focus, select:focus, textarea:focus{
+      outline:none; border-color:var(--gold);
+    }
+    button[type="submit"]{
+      background:linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color:var(--white); padding:16px;
+      border:0; border-radius:4px; font-size:16px; font-weight:700;
+      cursor:pointer; transition:transform .2s;
+      text-transform:uppercase; letter-spacing:1px;
+    }
+    button[type="submit"]:hover{transform:translateY(-2px)}
+
+    /* Responsive TABLET */
+    @media (max-width: 1024px){
+      .grid{grid-template-columns:repeat(2, 1fr); gap:24px}
+      .hero h2{font-size:48px; letter-spacing:3px}
+      .hero p{font-size:17px}
+      h3{font-size:34px}
+      .slideshow-container{max-width:700px}
+      .slide img{max-height:500px}
+    }
+
+    /* Responsive MOBILE */
+    @media (max-width: 768px){
+      .topbar{
+        flex-wrap:wrap; 
+        height:auto; 
+        padding:16px 20px;
+        position:relative;
+      }
+      
+      .logo-area{flex:1}
+      .logo-area img{height:38px}
+      .brand-text h1{font-size:16px; letter-spacing:1.2px}
+      .brand-text p{font-size:10px}
+      
+      .hamburger{display:flex}
+      
+      .nav-container{
+        width:100%; 
+        order:3;
+        flex-direction:column;
+        gap:0;
+        max-height:0;
+        overflow:hidden;
+        transition:max-height .3s ease;
+      }
+      .nav-container.active{
+        max-height:500px;
+        padding:8px 0;
+      }
+
+      nav{
+        width:100%;
+        flex-direction:column;
+        gap:0;
+        background:rgba(0,0,0,.1);
+        border-radius:8px;
+      }
+      nav a{
+        padding:14px 20px;
+        font-size:15px;
+        border-bottom:0;
+        border-left:3px solid transparent;
+        text-align:left;
+        width:100%;
+      }
+      nav a:hover, nav a.active{
+        border-left-color:var(--white);
+        border-bottom:0;
+      }
+      
+      .cta-buttons{
+        width:100%;
+        padding:12px 20px;
+        gap:10px;
+      }
+      .cta-phone, .cta-whatsapp{
+        flex:1;
+        justify-content:center;
+        font-size:14px; 
+        padding:12px 16px;
+      }
+      
+      .hero{height:50vh; min-height:400px}
+      .hero h2{font-size:32px; letter-spacing:2px; line-height:1.3}
+      .hero p{font-size:15px; line-height:1.7}
+      
+      main{padding:40px 20px}
+      h3{font-size:28px; margin-bottom:30px}
+      .intro{font-size:16px; line-height:1.8; margin-bottom:30px}
+      
+      .grid{grid-template-columns:1fr; gap:20px}
+      .grid2{grid-template-columns:1fr}
+      
+      .card{padding:24px 20px}
+      .card h4{font-size:20px}
+      .card p{font-size:14px; line-height:1.6}
+      
+      .partner-box{padding:30px 20px; margin-top:30px}
+      .partner-box h4{font-size:24px}
+      .partner-box img{max-width:200px; padding:12px}
+      .partner-box p{font-size:15px}
+      
+      .pdf-section{padding:20px; margin-top:30px}
+      .pdf-section h4{font-size:22px}
+      .pdf-controls{flex-direction:column; gap:10px}
+      .pdf-btn{justify-content:center; width:100%; padding:14px 20px; font-size:16px}
+      .pdf-viewer{height:500px}
+      
+      .image-gallery{padding:20px; margin-top:30px}
+      .image-gallery h4{font-size:22px}
+      .slideshow-container{max-width:100%}
+      .slide img{max-height:400px}
+      .slide-arrow{font-size:24px; padding:12px 16px}
+      .thumbnails{grid-template-columns:repeat(auto-fit, minmax(80px, 1fr)); gap:8px}
+      .thumbnail img{height:80px}
+      .slideshow-controls{flex-wrap:wrap; gap:10px}
+      .slideshow-btn{width:45%; font-size:13px; padding:8px 16px}
+      .slideshow-counter{width:100%; text-align:center}
+      
+      .contact-buttons{flex-direction:column; gap:10px}
+      .contact-btn{justify-content:center; width:100%; padding:14px 20px; font-size:16px}
+      
+      form{padding:0}
+      input, select, textarea{padding:16px; font-size:16px}
+      button[type="submit"]{padding:18px; font-size:17px}
+      
+      footer{padding:30px 20px 16px}
+      footer h4{font-size:22px}
+      footer p{font-size:13px; line-height:1.7}
+    }
+
+    /* Responsive SMALL MOBILE */
+    @media (max-width: 480px){
+      .hero{min-height:350px}
+      .hero h2{font-size:26px; letter-spacing:1.5px}
+      .hero p{font-size:14px}
+      h3{font-size:24px}
+      .logo-area img{height:32px}
+      .brand-text h1{font-size:14px}
+      .cta-phone, .cta-whatsapp{font-size:13px; padding:10px 14px}
+      .pdf-viewer{height:400px}
+      .slide img{max-height:300px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a class="logo-area" href="#home" aria-label="Home">
+        <img src="Logo-Definitivo.jpg" alt="Laudato – L.T. Services dal 1978" />
+        <div class="brand-text">
+          <h1>Laudato – L.T. Services</h1>
+          <p>Articoli cimiteriali dal 1978</p>
+        </div>
+      </a>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="nav-container" id="navContainer">
+        <nav aria-label="Menu">
+          <a href="#home" data-route class="active">Home</a>
+          <a href="#composizioni" data-route>Composizioni</a>
+          <a href="#arte-funeraria" data-route>Arte funeraria</a>
+          <a href="#articoli-marmisti" data-route>Articoli per marmisti</a>
+          <a href="#contatti" data-route>Contatti</a>
+        </nav>
+
+        <div class="cta-buttons">
+          <a class="cta-phone" href="tel:+390824315585">
+            <span>☎</span> Chiama
+          </a>
+          <a class="cta-whatsapp" href="https://wa.me/390824315585" target="_blank" rel="noopener">
+            <span>💬</span> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero hero-home" id="heroSection">
+    <div class="hero-content">
+      <h2>Laudato – L.T. Services</h2>
+      <p>Dal 1978 realizziamo articoli cimiteriali di qualità: composizioni, arte funeraria e forniture per operatori del settore a Benevento e provincia.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <section id="home" class="active">
+        <h3>Realizzazione artigianale di articoli cimiteriali</h3>
+        <p class="intro">Laudato – L.T. Services è specializzata nella fornitura di articoli cimiteriali per operatori del settore funerario e marmisti. Con sede a Benevento e attiva dal 1978, offriamo composizioni, arte funeraria e una vasta gamma di prodotti per l'arredo cimiteriale.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h4>Composizioni</h4>
+            <p>Soluzioni complete per allestimenti cimiteriali, con ampia scelta di materiali, finiture e stili. Cataloghi dedicati per ogni esigenza.</p>
+          </div>
+          <div class="card">
+            <h4>Arte funeraria</h4>
+            <p>Elementi decorativi, vasi, lampade votive, croci, angeli e accessori in bronzo, marmo e materiali pregiati per la memoria.</p>
+          </div>
+          <div class="card">
+            <h4>Articoli per marmisti</h4>
+            <p>Forniture tecniche e componentistica dedicata a laboratori e operatori: sistemi di fissaggio, supporti, accessori per posa e installazione.</p>
+          </div>
+        </div>
+
+        <div class="partner-box">
+          <h4>Concessionario esclusivista</h4>
+          <img src="vezzani.jpg" alt="Vezzani – Concessionario esclusivista" />
+          <p>Laudato – L.T. Services è <strong>concessionario esclusivista Vezzani</strong> per la zona di Benevento. Vezzani è leader nella produzione di articoli per il settore funerario e cimiteriale. Grazie a questa esclusiva, garantiamo accesso diretto ai cataloghi completi, tempi di consegna rapidi e supporto tecnico specializzato per ogni tipo di fornitura.</p>
+        </div>
+      </section>
+
+      <section id="composizioni">
+        <h3>Composizioni</h3>
+        <p class="intro">Offriamo un'ampia gamma di composizioni per l'arredo cimiteriale: dalle soluzioni standard ai progetti su misura, con materiali selezionati e finiture di pregio. Ogni articolo è scelto per garantire durata, eleganza e rispetto della memoria.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h4>Soluzioni standard</h4>
+            <p>Composizioni pronte con finiture classiche ed eleganti, disponibili in vari formati e materiali. Ideali per esigenze ricorrenti e tempi di consegna rapidi.</p>
+          </div>
+          <div class="card">
+            <h4>Progetti su misura</h4>
+            <p>Realizziamo composizioni personalizzate in base a misure, stile e budget. Assistenza tecnica dalla progettazione alla posa in opera.</p>
+          </div>
+          <div class="card">
+            <h4>Materiali e finiture</h4>
+            <p>Marmo, granito, bronzo, acciaio inox e materiali compositi. Ogni finitura è scelta per resistenza agli agenti atmosferici e durata nel tempo.</p>
+          </div>
+        </div>
+
+        <div class="pdf-section">
+          <h4>📄 Catalogo Soluzioni Lapidi</h4>
+          <p style="text-align:center; color:var(--gray-light); margin-bottom:20px">Sfoglia il catalogo completo con tutte le soluzioni disponibili per lapidi. Puoi visualizzarlo direttamente qui sotto oppure scaricarlo in PDF.</p>
+          
+          <div class="pdf-controls">
+            <a href="Soluzioni-Lapidi_compressed.pdf" download class="pdf-btn download">
+              <span>⬇</span> Scarica PDF
+            </a>
+            <button onclick="togglePDF('pdfViewer1', 'toggleText1')" class="pdf-btn view">
+              <span>👁</span> <span id="toggleText1">Mostra catalogo</span>
+            </button>
+          </div>
+
+          <iframe 
+            id="pdfViewer1"
+            class="pdf-viewer" 
+            src="Soluzioni-Lapidi_compressed.pdf#view=FitH"
+            style="display:none"
+            title="Catalogo Soluzioni Lapidi">
+          </iframe>
+        </div>
+
+        <div class="card full" style="margin-top:30px">
+          <h4>Richiedi informazioni</h4>
+          <p>Contattaci per ricevere preventivi personalizzati, schede tecniche dettagliate e consulenza nella scelta dei materiali più adatti al tuo progetto.</p>
+        </div>
+      </section>
+
+      <section id="arte-funeraria">
+        <h3>Arte funeraria</h3>
+        <p class="intro">La nostra gamma di articoli di arte funeraria comprende elementi decorativi, accessori e complementi per lapidi e monumenti. Ogni pezzo è selezionato per qualità, eleganza e resistenza, con particolare attenzione ai dettagli e alle finiture.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h4>Vasi e portafiori</h4>
+            <p>Vasi in bronzo, marmo, granito e acciaio inox. Disponibili in vari formati e stili, con sistemi di fissaggio e drenaggio integrati.</p>
+          </div>
+          <div class="card">
+            <h4>Lampade votive</h4>
+            <p>Lampade a LED e tradizionali, in bronzo, vetro temperato e acciaio. Soluzioni per installazione a parete, a terra o integrate nelle lapidi.</p>
+          </div>
+          <div class="card">
+            <h4>Croci e simboli religiosi</h4>
+            <p>Croci in bronzo, marmo e pietra, simboli religiosi e laici. Finiture lucide, opache e ossidate per ogni stile architettonico.</p>
+          </div>
+          <div class="card">
+            <h4>Angeli e sculture</h4>
+            <p>Statue e bassorilievi in marmo, resina e bronzo. Dal classico al contemporaneo, con possibilità di personalizzazione e restauro.</p>
+          </div>
+          <div class="card">
+            <h4>Lettere e numeri</h4>
+            <p>Caratteri in bronzo, ottone e acciaio inox per incisioni e composizioni. Font classici e moderni, con sistemi di fissaggio discreti.</p>
+          </div>
+          <div class="card">
+            <h4>Accessori decorativi</h4>
+            <p>Cornici portafoto, rosari, cuori, libri in marmo e bronzo. Catalogo completo con centinaia di articoli per ogni esigenza decorativa.</p>
+          </div>
+        </div>
+
+        <!-- Image Gallery Lapidi a terra -->
+        <div class="image-gallery">
+          <h4>🖼️ Galleria Lapidi a Terra</h4>
+          <p class="gallery-subtitle">Scopri i nostri modelli di lapidi a terra. Navigazione manuale o automatica.</p>
+          
+          <div class="slideshow-container">
+            <div class="slide active">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA1.jpg" alt="Lapide a terra 1">
+            </div>
+            <div class="slide">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA2.jpg" alt="Lapide a terra 2">
+            </div>
+            <div class="slide">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA3.jpg" alt="Lapide a terra 3">
+            </div>
+            <div class="slide">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA4.jpg" alt="Lapide a terra 4">
+            </div>
+            
+            <button class="slide-arrow prev" onclick="changeSlide(-1)">❮</button>
+            <button class="slide-arrow next" onclick="changeSlide(1)">❯</button>
+          </div>
+
+          <div class="slideshow-controls">
+            <button class="slideshow-btn" id="autoplayBtn" onclick="toggleAutoplay()">▶ Avvia Autoplay</button>
+            <div class="slideshow-counter">
+              <span id="slideCounter">1</span> / 4
+            </div>
+          </div>
+
+          <div class="thumbnails">
+            <div class="thumbnail active" onclick="goToSlide(0)">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA1.jpg" alt="Thumbnail 1">
+            </div>
+            <div class="thumbnail" onclick="goToSlide(1)">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA2.jpg" alt="Thumbnail 2">
+            </div>
+            <div class="thumbnail" onclick="goToSlide(2)">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA3.jpg" alt="Thumbnail 3">
+            </div>
+            <div class="thumbnail" onclick="goToSlide(3)">
+              <img src="Lapidi-a-terra/LAPIDI-TERRA4.jpg" alt="Thumbnail 4">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="articoli-marmisti">
+        <h3>Articoli per marmisti</h3>
+        <p class="intro">Forniamo articoli tecnici e componentistica per laboratori di marmo, operatori del settore funerario e installatori. Ogni prodotto è selezionato per affidabilità, facilità di posa e conformità alle normative.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h4>Sistemi di fissaggio</h4>
+            <p>Tasselli, staffe, perni e kit di ancoraggio per lapidi, vasi e accessori. Materiali inox e zincati per massima resistenza alla corrosione.</p>
+          </div>
+          <div class="card">
+            <h4>Sigillanti e collanti</h4>
+            <p>Adesivi epossidici, siliconi neutri e specifici per marmo e granito. Prodotti certificati per uso esterno e interno.</p>
+          </div>
+          <div class="card">
+            <h4>Supporti e basi</h4>
+            <p>Basamenti, zoccoli, piedistalli e supporti in marmo, granito e calcestruzzo. Soluzioni modulari per ogni tipo di installazione.</p>
+          </div>
+          <div class="card">
+            <h4>Strumenti e attrezzature</h4>
+            <p>Utensili diamantati, dischi, punte, spazzole e prodotti per lucidatura. Assistenza nella scelta dell'attrezzatura professionale.</p>
+          </div>
+          <div class="card">
+            <h4>Materiali per restauro</h4>
+            <p>Stucchi, resine, pigmenti e prodotti per il restauro conservativo di monumenti e opere storiche.</p>
+          </div>
+          <div class="card">
+            <h4>Consulenza tecnica</h4>
+            <p>Supporto nella scelta dei materiali più adatti, verifica di fattibilità e assistenza per installazioni complesse.</p>
+          </div>
+        </div>
+
+        <div class="card full" style="margin-top:30px">
+          <h4>Richiedi il listino dedicato</h4>
+          <p>Mettiamo a disposizione di marmisti e operatori del settore listini dettagliati con prezzi dedicati, schede tecniche e informazioni su tempi di consegna. Contattateci per ricevere la documentazione completa e per valutare forniture ricorrenti con condizioni personalizzate.</p>
+        </div>
+      </section>
+
+      <section id="contatti">
+        <h3>Contatti</h3>
+        <p class="intro">Per informazioni, preventivi e richieste di cataloghi, contattateci telefonicamente o via WhatsApp. Siamo a disposizione di operatori del settore e marmisti per consulenze tecniche e sopralluoghi.</p>
+
+        <div class="grid grid2">
+          <div class="card">
+            <h4>Dove siamo</h4>
+            <p style="margin:16px 0"><strong>Laudato – L.T. Services<br/>dal 1978</strong></p>
+            <p style="margin:10px 0">Via Ponticelli, 8<br/>82100 Benevento (BN)</p>
+            <p style="margin:16px 0">
+              <strong>Tel / WhatsApp:</strong> <a href="tel:+390824315585" style="color:var(--gold-dark); font-weight:700">0824 315585</a><br/>
+              <strong>Email:</strong> <a href="mailto:ordiniltservices@gmail.com" style="color:var(--gold-dark)">ordiniltservices@gmail.com</a>
+            </p>
+            <div class="contact-buttons">
+              <a href="tel:+390824315585" class="contact-btn phone">
+                <span>☎</span> Chiama ora
+              </a>
+              <a href="https://wa.me/390824315585" target="_blank" rel="noopener" class="contact-btn whatsapp">
+                <span>💬</span> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Richiedi informazioni</h4>
+            <form id="leadForm">
+              <input required name="nome" placeholder="Nome e cognome / Azienda" />
+              <input required type="tel" name="telefono" placeholder="Telefono" />
+              <input type="email" name="email" placeholder="Email (opzionale)" />
+              <select name="categoria">
+                <option value="">Seleziona la categoria</option>
+                <option value="Composizioni">Composizioni</option>
+                <option value="Arte funeraria">Arte funeraria</option>
+                <option value="Articoli per marmisti">Articoli per marmisti</option>
+                <option value="Preventivo">Richiesta preventivo</option>
+                <option value="Altro">Altro</option>
+              </select>
+              <textarea required name="messaggio" placeholder="Descrivi la tua richiesta" rows="4"></textarea>
+              <button type="submit">Invia richiesta</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <h4>Laudato – L.T. Services</h4>
+      <p>Articoli cimiteriali dal 1978</p>
+      <p>Via Ponticelli, 8 – 82100 Benevento (BN)</p>
+      <p>Tel / WhatsApp: <a href="tel:+390824315585">0824 315585</a> • Email: <a href="mailto:ordiniltservices@gmail.com">ordiniltservices@gmail.com</a></p>
+      <p style="margin-top:16px; font-size:13px">Concessionario esclusivista: <strong>Vezzani</strong></p>
+      <div class="credits">© <span id="year"></span> Laudato – L.T. Services. Tutti i diritti riservati.</div>
+    </div>
+  </footer>
+
+  <script>
+    const routes = [...document.querySelectorAll('[data-route]')];
+    const sections = [...document.querySelectorAll('main section')];
+    const heroSection = document.getElementById('heroSection');
+    const hamburger = document.getElementById('hamburger');
+    const navContainer = document.getElementById('navContainer');
+
+    const heroData = {
+      'home': {
+        class: 'hero-home',
+        title: 'Laudato – L.T. Services',
+        subtitle: 'Dal 1978 realizziamo articoli cimiteriali di qualità: composizioni, arte funeraria e forniture per operatori del settore a Benevento e provincia.'
+      },
+      'composizioni': {
+        class: 'hero-composizioni',
+        title: 'Composizioni',
+        subtitle: 'Soluzioni complete per l\'arredo cimiteriale, con materiali selezionati e finiture di pregio per ogni esigenza.'
+      },
+      'arte-funeraria': {
+        class: 'hero-arte',
+        title: 'Arte funeraria',
+        subtitle: 'Elementi decorativi, accessori e complementi in bronzo, marmo e materiali pregiati per la memoria dei vostri cari.'
+      },
+      'articoli-marmisti': {
+        class: 'hero-marmisti',
+        title: 'Articoli per marmisti',
+        subtitle: 'Forniture tecniche e componentistica professionale per laboratori, operatori del settore e installatori.'
+      },
+      'contatti': {
+        class: 'hero-contatti',
+        title: 'Contatti',
+        subtitle: 'Siamo a Benevento dal 1978. Contattateci per informazioni, preventivi e consulenze tecniche.'
+      }
+    };
+
+    // Slideshow Variables
+    let currentSlide = 0;
+    let autoplayInterval = null;
+    let isAutoplayRunning = false;
+    const slides = document.querySelectorAll('.slide');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const totalSlides = slides.length;
+
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = 0;
+      if (n < 0) currentSlide = totalSlides - 1;
+      
+      slides.forEach(slide => slide.classList.remove('active'));
+      thumbnails.forEach(thumb => thumb.classList.remove('active'));
+      
+      slides[currentSlide].classList.add('active');
+      thumbnails[currentSlide].classList.add('active');
+      
+      document.getElementById('slideCounter').textContent = currentSlide + 1;
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      showSlide(currentSlide);
+      
+      if (isAutoplayRunning) {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+      }
+    }
+
+    function goToSlide(n) {
+      currentSlide = n;
+      showSlide(currentSlide);
+      
+      if (isAutoplayRunning) {
+        clearInterval(autoplayInterval);
+        startAutoplay();
+      }
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(() => {
+        currentSlide++;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        showSlide(currentSlide);
+      }, 3000);
+    }
+
+    function toggleAutoplay() {
+      const btn = document.getElementById('autoplayBtn');
+      
+      if (isAutoplayRunning) {
+        clearInterval(autoplayInterval);
+        isAutoplayRunning = false;
+        btn.textContent = '▶ Avvia Autoplay';
+      } else {
+        startAutoplay();
+        isAutoplayRunning = true;
+        btn.textContent = '⏸ Ferma Autoplay';
+      }
+    }
+
+    // Hamburger menu
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navContainer.classList.toggle('active');
+    });
+
+    routes.forEach(route => {
+      route.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          hamburger.classList.remove('active');
+          navContainer.classList.remove('active');
+        }
+      });
+    });
+
+    function setActive(hash){
+      const id = (hash || '#home').replace('#','');
+      sections.forEach(s => s.classList.toggle('active', s.id === id));
+      routes.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      
+      const data = heroData[id] || heroData['home'];
+      heroSection.className = 'hero ' + data.class;
+      heroSection.querySelector('h2').textContent = data.title;
+      heroSection.querySelector('p').textContent = data.subtitle;
+      
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+    
+    window.addEventListener('hashchange', () => setActive(location.hash));
+    setActive(location.hash);
+
+    // PDF Toggle
+    function togglePDF(viewerId, textId) {
+      const viewer = document.getElementById(viewerId);
+      const text = document.getElementById(textId);
+      if (viewer.style.display === 'none') {
+        viewer.style.display = 'block';
+        text.textContent = 'Nascondi catalogo';
+      } else {
+        viewer.style.display = 'none';
+        text.textContent = 'Mostra catalogo';
+      }
+    }
+
+    // Form
+    document.getElementById('leadForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const body =
+        `Nome/Azienda: ${fd.get('nome')}\n`+
+        `Telefono: ${fd.get('telefono')}\n`+
+        `Email: ${fd.get('email') || 'Non fornita'}\n`+
+        `Categoria: ${fd.get('categoria') || 'Non specificata'}\n\n`+
+        `Messaggio:\n${fd.get('messaggio')}\n`;
+      const subject = 'Richiesta info – Laudato L.T. Services';
+      location.href = `mailto:ordiniltservices@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
