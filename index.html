@@ -88,23 +88,24 @@
       background:rgba(255,255,255,.12);
     }
 
-    .cta-buttons{display:flex; gap:10px; align-items:center}
+    .cta-buttons{
+      display:flex; 
+      gap:8px; 
+      align-items:center;
+    }
     .cta-phone, .cta-whatsapp{
       background:var(--white);
       color:var(--gold-dark);
-      padding:8px 16px; 
+      padding:7px 14px; 
       border-radius:30px;
       font-weight:700; 
-      font-size:13px;
+      font-size:12px;
       display:flex; 
       align-items:center; 
-      gap:6px;
+      gap:5px;
       box-shadow:0 3px 10px rgba(0,0,0,.15);
       transition:transform .2s;
-    }
-    .cta-whatsapp{
-      background:#25d366;
-      color:var(--white);
+      white-space:nowrap;
     }
     .cta-phone:hover, .cta-whatsapp:hover{transform:translateY(-2px)}
 
@@ -126,6 +127,8 @@
     .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px, 8px)}
     .hamburger.active span:nth-child(2){opacity:0}
     .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px, -7px)}
+
+    .header-whatsapp{display:none}
 
     /* Hero */
     .hero{
@@ -676,6 +679,12 @@
         font-size:12px; 
         padding:10px 14px;
       }
+      .cta-whatsapp{
+        flex:1;
+        justify-content:center;
+        font-size:12px;
+        padding:10px 14px;
+      }
       
       /* Hero Mobile */
       .hero{height:45vh; min-height:350px}
@@ -776,7 +785,7 @@
         </div>
       </a>
 
-      <!-- WhatsApp sempre visibile a destra (mobile) -->
+      <!-- WhatsApp sempre visibile a destra (solo mobile) -->
       <div class="header-whatsapp">
         <a class="cta-whatsapp" href="https://wa.me/390824315585" target="_blank" rel="noopener">
           <span>💬</span> Contattaci
@@ -796,6 +805,9 @@
         <div class="cta-buttons">
           <a class="cta-phone" href="tel:+390824315585">
             <span>☎</span> Chiama ora
+          </a>
+          <a class="cta-whatsapp" href="https://wa.me/390824315585" target="_blank" rel="noopener">
+            <span>💬</span> WhatsApp
           </a>
         </div>
       </div>
@@ -1216,4 +1228,3 @@
   </script>
 </body>
 </html>
-HTML
