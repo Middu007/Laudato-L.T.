@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessori per Lapidi | Laudato – L.T. Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#c9a961;--gold-dark:#a88a4d;--marble:#f8f8f6;--gray:#4a4a4a;--gray-light:#7a7a7a;--white:#ffffff;--font-serif:'Cormorant Garamond',serif;--font-sans:'Lato',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);color:var(--gray);background:var(--marble);line-height:1.6;}
+a{color:inherit;text-decoration:none}
+header{background:#fff;border-bottom:2px solid var(--gold-dark);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.1);}
+.topbar{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:90px;gap:16px;}
+.logo-area{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-area img{height:70px;width:auto;object-fit:contain;}
+.brand-text h1{font-family:var(--font-serif);font-size:17px;font-weight:600;color:var(--gold);letter-spacing:1.2px;text-transform:uppercase;margin:0;line-height:1.2;}
+.brand-text p{font-size:10px;color:var(--gold-dark);margin:3px 0 0;letter-spacing:.6px;}
+nav{display:flex;gap:0;align-items:center;}
+nav a{padding:8px 16px;font-size:13px;font-weight:400;color:var(--gold);border-bottom:3px solid transparent;transition:all .3s;white-space:nowrap;}
+nav a:hover,nav a.active{border-bottom-color:var(--gold);}
+.cta-buttons{display:flex;gap:8px;align-items:center;}
+.cta-phone,.cta-whatsapp{background:var(--white);color:var(--gold-dark);padding:7px 14px;border-radius:30px;font-weight:700;font-size:12px;display:flex;align-items:center;gap:5px;box-shadow:0 3px 10px rgba(0,0,0,.15);transition:transform .2s;white-space:nowrap;border:1.5px solid var(--gold-dark);}
+.hero{position:relative;height:55vh;min-height:350px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=85');background-size:cover;background-position:center;}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.6));z-index:1;}
+.hero-content{position:relative;z-index:2;max-width:800px;padding:0 30px;}
+.hero h2{font-family:var(--font-serif);font-size:44px;font-weight:300;letter-spacing:4px;margin:0 0 10px;text-transform:uppercase;text-shadow:0 2px 20px rgba(0,0,0,.6);}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.7);margin:0 0 14px;}
+.breadcrumb a{color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.4);}
+.content-section{background:#fff;padding:60px 30px;}
+.content-section .container{max-width:900px;margin:0 auto;}
+.content-section h3{font-family:var(--font-serif);font-size:28px;color:var(--gold-dark);letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;}
+.content-section p{font-size:15px;line-height:1.8;color:var(--gray-light);margin:0 0 16px;}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0;}
+.feature-card{background:var(--marble);padding:24px 20px;border:1px solid #e0e0de;border-left:3px solid var(--gold);}
+.feature-card h4{font-family:var(--font-serif);font-size:18px;color:var(--gold-dark);margin:0 0 10px;}
+.feature-card p{font-size:13px;color:var(--gray-light);margin:0;line-height:1.6;}
+.cta-section{background:var(--marble);padding:50px 30px;text-align:center;}
+.cta-section .container{max-width:700px;margin:0 auto;}
+.cta-section h3{font-family:var(--font-serif);font-size:26px;color:var(--gold-dark);letter-spacing:2px;margin:0 0 16px;}
+.cta-section p{color:var(--gray-light);margin:0 0 24px;font-size:15px;}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;transition:transform .2s,box-shadow .2s;margin:0 6px;}
+.cta-btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;}
+.cta-btn.secondary{background:#fff;color:var(--gold-dark);border:2px solid var(--gold-dark);}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.2);}
+footer{background:linear-gradient(135deg,#4a4a4a,#3a3a3a);color:rgba(255,255,255,.8);padding:35px 30px 18px;text-align:center;}
+footer .container{max-width:1200px;margin:0 auto;}
+footer h4{font-family:var(--font-serif);font-size:22px;color:var(--gold);margin:0 0 10px;letter-spacing:2px;}
+footer p{margin:6px 0;font-size:13px;}
+footer a{color:var(--gold);font-weight:600;}
+footer .credits{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:11px;color:rgba(255,255,255,.5);}
+@media(max-width:768px){.topbar{height:auto;padding:12px 16px;}.logo-area img{height:50px;}.brand-text h1{font-size:14px;}nav{display:none;}.features{grid-template-columns:1fr;}.hero h2{font-size:28px;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <a href="../index.html" class="logo-area">
+      <img src="../logo.png" alt="Laudato L.T. Services">
+      <div class="brand-text"><h1>Laudato – L.T. Services</h1><p>Articoli cimiteriali dal 1978</p></div>
+    </a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../arte-funeraria.html" class="active">Arte funeraria</a>
+      <a href="../articoli-marmisti.html">Articoli per marmisti</a>
+      <a href="../index.html#contatti">Contatti</a>
+    </nav>
+    <div class="cta-buttons">
+      <a class="cta-phone" href="tel:+390824315585">☎ Chiama ora</a>
+      <a class="cta-whatsapp" href="https://wa.me/390824315585">💬 WhatsApp</a>
+    </div>
+  </div>
+</header>
+<div class="hero">
+  <div class="hero-content">
+    <p class="breadcrumb"><a href="../arte-funeraria.html">← Arte Funeraria</a></p>
+    <h2>Accessori per Lapidi</h2>
+  </div>
+</div>
+<section class="content-section">
+  <div class="container">
+    <h3>La nostra gamma di accessori</h3>
+    <p>Offriamo una vasta selezione di accessori per lapidi di alta qualità, realizzati con materiali pregiati e duraturi. Ogni articolo è selezionato con cura per garantire eleganza, resistenza agli agenti atmosferici e lunga durata nel tempo.</p>
+    <p>Come concessionari esclusivisti Vezzani SPA per la zona di Benevento, proponiamo l’intera gamma di accessori del brand, leader nel settore funerario e cimiteriale dal 1952.</p>
+    <div class="features">
+      <div class="feature-card"><h4>Materiali pregiati</h4><p>Bronzo, ottone, acciaio inox e materiali compositi di alta qualità per garantire durata e resistenza.</p></div>
+      <div class="feature-card"><h4>Design esclusivo</h4><p>Linee eleganti e raffinate, disponibili in diversi stili classici e contemporanei per ogni esigenza.</p></div>
+      <div class="feature-card"><h4>Finitura curata</h4><p>Ogni accessorio viene lavorato e rifinito con attenzione al dettaglio, lucidato o satinato su richiesta.</p></div>
+    </div>
+    <p>Per ulteriori informazioni sui prodotti disponibili, listini prezzi dedicati e disponibilità, non esitate a contattarci telefonicamente o via WhatsApp.</p>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="container">
+    <h3>Richiedi informazioni</h3>
+    <p>Contattaci per ricevere il listino prezzi, schede tecniche e consulenza nella scelta degli accessori più adatti al tuo progetto.</p>
+    <a class="cta-btn primary" href="tel:+390824315585">☎ Chiama ora</a>
+    <a class="cta-btn secondary" href="https://wa.me/390824315585">💬 WhatsApp</a>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <h4>Laudato – L.T. Services</h4>
+    <p>Articoli cimiteriali dal 1978 &bull; Via Ponticelli, 8 – 82100 Benevento (BN)</p>
+    <p>Tel: <a href="tel:+390824315585">0824 315585</a> &bull; <a href="mailto:ordiniltservices@gmail.com">ordiniltservices@gmail.com</a></p>
+    <div class="credits">&copy; <span id="year"></span> Laudato – L.T. Services. Tutti i diritti riservati.</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
