@@ -3,81 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Targhe Funerarie e Statue - Laudato L.T.</title>
+<title>Targhe Funerarie e Statue | Laudato – L.T. Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Georgia',serif;color:#333;background:#fafaf8;}
-header{background:#1a1a2e;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
-header .logo{color:#d4af37;font-size:1.5rem;font-weight:bold;text-decoration:none;letter-spacing:1px;}
-nav a{color:#ccc;text-decoration:none;margin-left:24px;font-size:.9rem;transition:color .3s;}
-nav a:hover{color:#d4af37;}
-.hero{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1519974719765-e6559eac2575?w=1400') center/cover no-repeat;color:#fff;text-align:center;padding:100px 20px;}
-.hero h1{font-size:2.6rem;margin-bottom:14px;letter-spacing:2px;}
-.hero p{font-size:1.1rem;max-width:600px;margin:0 auto;color:#e0d5c5;}
-.breadcrumb{background:#f0ece4;padding:12px 40px;font-size:.85rem;color:#666;}
-.breadcrumb a{color:#8b6914;text-decoration:none;}
-.section{padding:60px 40px;max-width:1100px;margin:0 auto;}
-.section h2{font-size:1.8rem;color:#1a1a2e;margin-bottom:12px;border-bottom:2px solid #d4af37;padding-bottom:8px;display:inline-block;}
-.section p{margin-top:16px;line-height:1.8;color:#555;max-width:800px;}
-.cards{display:flex;flex-wrap:wrap;gap:24px;margin-top:36px;}
-.card{background:#fff;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,.08);overflow:hidden;flex:1 1 280px;max-width:340px;transition:transform .3s;}
-.card:hover{transform:translateY(-4px);}
-.card img{width:100%;height:180px;object-fit:cover;}
-.card-body{padding:20px;}
-.card-body h3{font-size:1.1rem;color:#1a1a2e;margin-bottom:8px;}
-.card-body p{font-size:.9rem;color:#666;line-height:1.6;}
-.cta{background:#1a1a2e;color:#fff;text-align:center;padding:60px 20px;}
-.cta h2{font-size:1.8rem;margin-bottom:16px;color:#d4af37;}
-.cta p{max-width:600px;margin:0 auto 24px;color:#ccc;}
-.btn{display:inline-block;background:#d4af37;color:#1a1a2e;padding:14px 36px;border-radius:30px;text-decoration:none;font-weight:bold;letter-spacing:1px;transition:background .3s;}
-.btn:hover{background:#b8962e;}
-footer{background:#111;color:#888;text-align:center;padding:30px;font-size:.85rem;}
-footer a{color:#d4af37;text-decoration:none;}
-@media(max-width:600px){.hero h1{font-size:1.8rem;}.section{padding:40px 20px;}}
+:root{--gold:#c9a961;--gold-dark:#a88a4d;--marble:#f8f8f6;--gray:#4a4a4a;--gray-light:#7a7a7a;--white:#ffffff;--font-serif:'Cormorant Garamond',serif;--font-sans:'Lato',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans);color:var(--gray);background:var(--marble);line-height:1.6;}
+a{color:inherit;text-decoration:none}
+header{background:#fff;border-bottom:2px solid var(--gold-dark);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.1);}
+.topbar{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:90px;gap:16px;}
+.logo-area{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-area img{height:70px;width:auto;object-fit:contain;}
+.brand-text h1{font-family:var(--font-serif);font-size:17px;font-weight:600;color:var(--gold);letter-spacing:1.2px;text-transform:uppercase;margin:0;line-height:1.2;}
+.brand-text p{font-size:10px;color:var(--gold-dark);margin:3px 0 0;letter-spacing:.6px;}
+nav{display:flex;gap:0;align-items:center;}
+nav a{padding:8px 16px;font-size:13px;font-weight:400;color:var(--gold);border-bottom:3px solid transparent;transition:all .3s;white-space:nowrap;}
+nav a:hover,nav a.active{border-bottom-color:var(--gold);}
+.cta-buttons{display:flex;gap:8px;align-items:center;}
+.cta-phone,.cta-whatsapp{background:var(--white);color:var(--gold-dark);padding:7px 14px;border-radius:30px;font-weight:700;font-size:12px;display:flex;align-items:center;gap:5px;box-shadow:0 3px 10px rgba(0,0,0,.15);transition:transform .2s;white-space:nowrap;border:1.5px solid var(--gold-dark);}
+.cta-phone:hover,.cta-whatsapp:hover{transform:translateY(-2px);}
+.hero{position:relative;height:55vh;min-height:350px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background-image:url('https://images.unsplash.com/photo-1519974719765-e6559eac2575?w=1600&q=85');background-size:cover;background-position:center;}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.4),rgba(0,0,0,.6));z-index:1;}
+.hero-content{position:relative;z-index:2;max-width:800px;padding:0 30px;}
+.hero h2{font-family:var(--font-serif);font-size:44px;font-weight:300;letter-spacing:4px;margin:0 0 10px;text-transform:uppercase;text-shadow:0 2px 20px rgba(0,0,0,.6);}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.7);margin:0 0 14px;}
+.breadcrumb a{color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.4);}
+.content-section{background:#fff;padding:60px 30px;}
+.content-section .container{max-width:900px;margin:0 auto;}
+.content-section h3{font-family:var(--font-serif);font-size:28px;color:var(--gold-dark);letter-spacing:2px;text-transform:uppercase;margin:0 0 20px;}
+.content-section p{font-size:15px;line-height:1.8;color:var(--gray-light);margin:0 0 16px;}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0;}
+.feature-card{background:var(--marble);padding:24px 20px;border:1px solid #e0e0de;border-left:3px solid var(--gold);}
+.feature-card h4{font-family:var(--font-serif);font-size:18px;color:var(--gold-dark);margin:0 0 10px;}
+.feature-card p{font-size:13px;color:var(--gray-light);margin:0;line-height:1.6;}
+.cta-section{background:var(--marble);padding:50px 30px;text-align:center;}
+.cta-section .container{max-width:700px;margin:0 auto;}
+.cta-section h3{font-family:var(--font-serif);font-size:26px;color:var(--gold-dark);letter-spacing:2px;margin:0 0 16px;}
+.cta-section p{color:var(--gray-light);margin:0 0 24px;font-size:15px;}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:8px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;transition:transform .2s,box-shadow .2s;margin:0 6px;}
+.cta-btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;}
+.cta-btn.secondary{background:#fff;color:var(--gold-dark);border:2px solid var(--gold-dark);}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.2);}
+footer{background:linear-gradient(135deg,#4a4a4a,#3a3a3a);color:rgba(255,255,255,.8);padding:35px 30px 18px;text-align:center;}
+footer .container{max-width:1200px;margin:0 auto;}
+footer h4{font-family:var(--font-serif);font-size:22px;color:var(--gold);margin:0 0 10px;letter-spacing:2px;}
+footer p{margin:6px 0;font-size:13px;}
+footer a{color:var(--gold);font-weight:600;}
+footer .credits{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:11px;color:rgba(255,255,255,.5);}
+@media(max-width:768px){.topbar{height:auto;padding:12px 16px;}.logo-area img{height:50px;}.brand-text h1{font-size:14px;}nav{display:none;}.features{grid-template-columns:1fr;}.hero h2{font-size:28px;}}
 </style>
 </head>
 <body>
 <header>
-<a class="logo" href="../index.html">Laudato &ndash; L.T.</a>
+<div class="topbar">
+<a href="../index.html" class="logo-area">
+<img src="../logo.png" alt="Laudato L.T. Services">
+<div class="brand-text">
+<h1>Laudato – L.T. Services</h1>
+<p>Articoli cimiteriali dal 1978</p>
+</div>
+</a>
 <nav>
 <a href="../index.html">Home</a>
-<a href="../arte-funeraria.html">Articoli Funerari</a>
+<a href="../arte-funeraria.html" class="active">Arte funeraria</a>
+<a href="../articoli-marmisti.html">Articoli per marmisti</a>
 <a href="../index.html#contatti">Contatti</a>
 </nav>
+<div class="cta-buttons">
+<a class="cta-phone" href="tel:+390824315585">☎ Chiama ora</a>
+<a class="cta-whatsapp" href="https://wa.me/390824315585">💬 WhatsApp</a>
+</div>
+</div>
 </header>
-<div class="hero">
-<h1>Targhe Funerarie &amp; Statue</h1>
-<p>Targhe commemorative e statue in bronzo, marmo e materiali pregiati per onorare i defunti.</p>
+<section class="hero">
+<div class="hero-content">
+<p class="breadcrumb"><a href="../index.html">Home</a> › <a href="../arte-funeraria.html">← Arte Funeraria</a></p>
+<h2>Targhe Funerarie &amp; Statue</h2>
 </div>
-<div class="breadcrumb">
-<a href="../index.html">Home</a> &rsaquo; <a href="../arte-funeraria.html">Articoli Funerari</a> &rsaquo; Targhe Funerarie e Statue
-</div>
-<div class="section">
-<h2>La Nostra Collezione</h2>
+</section>
+<section class="content-section">
+<div class="container">
+<h3>La nostra gamma di targhe e statue</h3>
 <p>Produciamo e forniamo targhe funerarie personalizzate e statue sacre di alta qualità. Ogni pezzo è realizzato con materiali selezionati per garantire durata nel tempo e un aspetto dignitoso ed elegante.</p>
-<div class="cards">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=600" alt="Targhe funerarie">
-<div class="card-body"><h3>Targhe in Bronzo</h3><p>Targhe personalizzate in bronzo con incisioni di nomi, date e dediche, resistenti agli agenti atmosferici.</p></div>
+<p>Come concessionari esclusivisti Vezzani SPA per la zona di Benevento, proponiamo l’intera gamma di targhe e statue del brand, leader nel settore funerario e cimiteriale dal 1952.</p>
+<div class="features">
+<div class="feature-card"><h4>Targhe in Bronzo</h4><p>Targhe personalizzate in bronzo con incisioni di nomi, date e dediche, resistenti agli agenti atmosferici.</p></div>
+<div class="feature-card"><h4>Statue Sacre</h4><p>Statue in resina, marmo sintetico e bronzo raffiguranti figure religiose e angeli custodi.</p></div>
+<div class="feature-card"><h4>Targhe in Ceramica</h4><p>Targhe artistiche in ceramica dipinta a mano con ritratti fotografici e decorazioni floreali.</p></div>
 </div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?w=600" alt="Statue sacre">
-<div class="card-body"><h3>Statue Sacre</h3><p>Statue in resina, marmo sintetico e bronzo raffiguranti figure religiose e angeli custodi.</p></div>
+<p>Per ulteriori informazioni sui prodotti disponibili e disponibilità, non esitate a contattarci.</p>
 </div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?w=600" alt="Targhe ceramica">
-<div class="card-body"><h3>Targhe in Ceramica</h3><p>Targhe artistiche in ceramica dipinta a mano con ritratti fotografici e decorazioni floreali.</p></div>
-</div>
-</div>
-</div>
-<div class="cta">
-<h2>Richiedi una targa personalizzata</h2>
+</section>
+<section class="cta-section">
+<div class="container">
+<h3>Richiedi una targa personalizzata</h3>
 <p>Contattaci per ordinare targhe e statue su misura, con incisioni e decorazioni a tua scelta.</p>
-<a href="../index.html#contatti" class="btn">Contattaci Ora</a>
+<a class="cta-btn primary" href="tel:+390824315585">☎ Chiama ora</a>
+<a class="cta-btn secondary" href="https://wa.me/390824315585">💬 WhatsApp</a>
 </div>
+</section>
 <footer>
-<p>&copy; <span id="year"></span> Laudato &ndash; L.T. Services &mdash; <a href="../index.html">Torna alla Home</a></p>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<div class="container">
+<h4>Laudato – L.T. Services</h4>
+<p>Articoli cimiteriali dal 1978 &bull; Via Ponticelli, 8 – 82100 Benevento (BN)</p>
+<p>Tel: <a href="tel:+390824315585">0824 315585</a> &bull; <a href="mailto:ordiniltservices@gmail.com">ordiniltservices@gmail.com</a></p>
+<div class="credits"><p>&copy; <span id="year"></span> Laudato – L.T. Services. Tutti i diritti riservati.</p></div>
+</div>
 </footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
